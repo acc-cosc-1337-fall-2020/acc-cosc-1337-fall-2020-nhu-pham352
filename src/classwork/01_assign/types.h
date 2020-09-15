@@ -1,2 +1,2 @@
 //DON'T ERASE THIS 
-int mutiply_numbers(int num1, int num2);
+int mutiply_numbers(int num1);
