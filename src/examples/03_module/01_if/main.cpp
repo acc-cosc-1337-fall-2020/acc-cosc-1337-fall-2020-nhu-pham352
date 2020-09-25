@@ -6,6 +6,17 @@ using std::cin;
 
 int main() 
 {
+	int x=3, y=3;
+
+	if(x==y)
+	{
+		cout<<"They are equal";
+	}
+	else
+	{
+		cout<<"not equal";
+	}
+	
 	//create a bool variable named even
 	//create an int variable named value
 	bool even;
@@ -29,6 +40,6 @@ int main()
 	cin>>value;
 
 	cout<<overtime(value);
-	
+
 	return 0;
 }
