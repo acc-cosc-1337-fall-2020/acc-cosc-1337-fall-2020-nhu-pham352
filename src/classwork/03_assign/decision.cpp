@@ -38,6 +38,14 @@ std::string get_letter_grade_using_switch(int grade)
 
     switch (grade)
     {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+        return_grade = "F";
+        break;
     case 6:
         return_grade = "D";
         break;
@@ -54,7 +62,7 @@ std::string get_letter_grade_using_switch(int grade)
         return_grade = "A";
         break;
     default:
-        return_grade = "F";
+        return_grade = "Invalid grade";
         break;
     
     return return_grade;
