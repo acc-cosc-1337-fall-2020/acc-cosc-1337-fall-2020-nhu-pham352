@@ -14,4 +14,22 @@ RESULT:
 5
 
 */
+void display_numbers(int num)
+{
+    for(int i=0; i < num; ++i)
+    {
+        std::cout<<"i is: "<<i<<"i + 1 is "<<i + 1<<"\n";
+    }
+}
 
+int sum_numbers(int num)
+{
+    int sum = 0;
+
+    for(int i=0; i <= num; ++i)
+    {
+        sum += i +i;
+    }
+
+    return sum;
+}
