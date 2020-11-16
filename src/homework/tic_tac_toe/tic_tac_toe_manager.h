@@ -1,4 +1,4 @@
-//h
+
 #include <vector>
 #include <iostream>
 #include "tic_tac_toe.h"

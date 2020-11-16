@@ -1,4 +1,4 @@
-//cpp
+
 #include "tic_tac_toe_manager.h"
 
 using std::cin;  using std::cout;

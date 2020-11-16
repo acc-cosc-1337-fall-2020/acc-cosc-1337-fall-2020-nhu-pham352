@@ -1,4 +1,4 @@
-//h
+
 #include "tic_tac_toe.h"
 
 #ifndef Tic_Tac_Toe4_h

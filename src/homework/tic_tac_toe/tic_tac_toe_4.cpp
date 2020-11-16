@@ -1,5 +1,4 @@
 #include "tic_tac_toe_4.h"
-
 /*
 class function check_column_win
 Win by column if and return true if (each column index)
@@ -20,9 +19,6 @@ bool TicTacToe4::check_column_win()
     
     else {return false;}
 }
-
-
-
 /*
 class function check_row_win
 Win by row if
@@ -41,8 +37,6 @@ bool TicTacToe4::check_row_win()
     
     else {return false;}
 }
-
-
 /*
 class function check_diagonal_win
 Win diagonally
