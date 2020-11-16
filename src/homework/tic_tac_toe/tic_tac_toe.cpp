@@ -1,6 +1,7 @@
 //cpp
 #include<iostream>
 #include<string>
+#include<vector>
 #include"tic_tac_toe.h"
 
 using std::string;  using std::vector;  using std::cout;
@@ -57,7 +58,7 @@ void TicTacToe::set_winner()
     
 }
 
-void TicTacToe::display_board()const
+/*void TicTacToe::display_board()const
 {
     for (std::size_t i=0; i < pegs.size(); i += 3)
     {
@@ -65,7 +66,7 @@ void TicTacToe::display_board()const
     }
 
 }
-
+*/
 
 void TicTacToe::set_next_player()
 {
@@ -138,4 +139,38 @@ bool TicTacToe::check_diagonal_win()
         return true;
     }
     return false;
+}
+
+std::istream& operator>>(std::istream& in, TicTacToe& game)
+{
+	int position;
+    cout<<"Select your position in the range 1-9: ";
+
+	while (!(in>>position))
+	{
+		cout<<"Invalid! Please choose a position (1-9): ";
+		in.clear();
+		in.ignore(123);
+	}
+	while (position <=0 || position >9)
+	{
+		cout<<"Invalid! Position must be between 1 & 9 \n";
+		cout<<"Please enter a number (1-9): ";
+		in>>position;
+	}
+	game.mark_board(position);
+    cout<<game;
+    return in;
+}
+std::ostream& operator << (std::ostream& out, const TicTacToe& game)
+{
+    for(std::size_t i = 0; (i < game.pegs.size()); i+=3)
+    {
+        if (i > 0) {
+          out << "-+-+-\n";
+        }
+        out<<game.pegs[i]<<"|"<<game.pegs[i+1]<<"|"<<game.pegs[i+2]<<"\n";
+    }
+
+    return out;
 }
